@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creating CSS Effects - Dina Eldeeb</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="#home" class="home-link">HOME</a>
+    <div class="dropdown">
+      <a href="#gallery" class="dropdown-button">IMAGES ▾</a>
+      <div class="dropdown-content">
+        <a href="#image1">IMAGE 1</a>
+        <a href="#image2">IMAGE 2</a>
+        <a href="#image3">IMAGE 3</a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="home">
+    <h1>Creating CSS Effects</h1>
+    <p>Explore beautiful Japanese scenery with interactive image effects.</p>
+  </header>
+
+  <main id="gallery" class="gallery">
+    <div class="image-container" id="image1">
+      <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1000" alt="Japanese temple" class="zoom">
+      <div class="overlay">Japan - Zoom Effect</div>
+    </div>
+
+    <div class="image-container" id="image2">
+      <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=1000" alt="Japanese scenery" class="rotate">
+      <div class="overlay">Japan - Rotate Effect</div>
+    </div>
+
+    <div class="image-container" id="image3">
+      <img src="https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=1000" alt="Mount Fuji" class="grayscale">
+      <div class="overlay">Japan - Color Effect</div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Created by Dina Eldeeb | CSS Effects Challenge</p>
+  </footer>
+</body>
+</html>
