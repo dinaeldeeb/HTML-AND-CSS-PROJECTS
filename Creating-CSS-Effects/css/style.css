@@ -1,0 +1,144 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f4f7fb;
+  color: #263238;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background: #333;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar a {
+  display: block;
+  padding: 20px 28px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropdown-button {
+  background: #e5a000;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  background: white;
+  box-shadow: 0 8px 20px #0003;
+}
+
+.dropdown-content a {
+  color: #333;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
+
+header {
+  padding: 70px 20px;
+  text-align: center;
+  background: #17324d;
+  color: white;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  padding: 45px 6%;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  aspect-ratio: 4 / 3;
+  background: #dce4ec;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.image-container:hover .zoom {
+  transform: scale(1.2);
+}
+
+.image-container:hover .rotate {
+  transform: rotate(5deg) scale(1.15);
+}
+
+.grayscale {
+  filter: grayscale(100%);
+}
+
+.image-container:hover .grayscale {
+  filter: grayscale(0%);
+  transform: scale(1.08);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0009;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+footer {
+  padding: 25px;
+  text-align: center;
+  background: #17324d;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+}
